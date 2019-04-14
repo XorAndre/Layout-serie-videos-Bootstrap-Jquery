@@ -11,6 +11,33 @@ audio, img, iframe, video{
 	display: inline-block;
 	width: 100%;
 }
+/*Buttons*/
+.bt{
+	box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 1px;
+	color: #fff;
+	display: inline-block;
+	font-size: 0.9rem;
+	font-family: arial;
+	font-weight: 600;
+	margin: 5px 0;
+	padding: .67rem 1rem;
+	text-transform: uppercase;
+}
+.bt:hover{
+	color: #fff!important;
+	text-decoration: none!important;
+}
+.bt-blue{
+	background-color: #3498db;
+	border-color: #3498db;
+}
+.bt-green{
+	background-color: #2ecc71;
+	border-color: #2ecc71;
+}
 /*Header*/
 .banner{
 	background-image: url(../img/header.jpg);
@@ -23,31 +50,77 @@ audio, img, iframe, video{
 	height: 100%;
 	width: 100%;
 }
-.banner .container{
-	padding: 17rem 0;
-}
 .banner h1{
 	font-size: 3.5rem;
 	font-weight: 600;
 	text-transform: uppercase;
 }
-@media(min-width: 768px){
+/*Banner versão celular*/
+@media(min-width: 360px){
+	.header .container{padding: 1rem 0;}
+}
+/*Desktop banner*/
+@media(min-width: 700px){
 	.banner{
 		min-height: 40em;
 	}
+	.banner .container{padding: 17rem 0;}
 	.banner h1{font-size: 5rem;}
 }
+/*menu*/
+.menu{
+	background: transparent!important;
+	position: fixed!important;
+	width: 100%;
+	z-index: 1;
+}
+.menu .navbar-brand,
+.menu .navbar-nav .nav-item> .nav-link{
+	color: #fff!important;
+}
 /*Sections*/
-section .container{padding: 2rem 0;}
+section .container{padding: 2rem 1rem;}
+section h2{
+	font-size: 2rem;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+section h3{font-size: 1.5rem;}
+section p{
+	font-size: .98rem!important;
+}
 .section-contato{
-	background-color: #ddd;
+	background-color: #f9f9f9;
+	color: #7d7d7d;
+}
+@media(min-width: 700px){
+	section .container{padding: 4rem 0;}
+	section h2{font-size: 3rem;}
+	section h3{font-size: 1.75rem;}
+	section p{
+		font-size: 1.4rem!important;
+	}
+	.section-contato{
+		background-image: url(../img/imagem-contato.jpg);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		color: #fff;
+	}
 }
 /*formularios*/
 .form-contato{
 	margin: 0 auto;
 	width: 99%;
 }
-@media(min-width: 768px){
+.form-contato input[type="text"],
+.form-contato textarea{
+	background-color: transparent;
+	border: 1px solid #c5c1c1;
+	margin-bottom: .5rem;
+	padding: .46rem .89rem;
+	width: 100%;
+}
+@media(min-width: 700px){
 	.form-contato{width: 90%;}
 }
 /*Footer*/
@@ -56,3 +129,21 @@ section .container{padding: 2rem 0;}
 	color: #eee;
 	padding: 1rem 0;
 }
+/*cards*/
+.card{
+	margin-bottom: .98rem;
+}
+.card .card-header, 
+.card .card-footer{
+	background-color: #fff!important;
+}
+.card .card-header{border-bottom: none!important;}
+.card .card-footer{border-top: none!important;}
+.card .card-body p{
+	font-size: .98rem!important;
+}
+@media(min-width: 700px){
+	.card .card-body p{
+		font-size: 1rem!important;
+	}
+
